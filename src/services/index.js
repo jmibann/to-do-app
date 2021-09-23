@@ -7,7 +7,7 @@ const getTodosList = async (setGlobalError) => {
 
   return window.fetch(apiURL, config)
     .then(async response => {
-      if (response.status === 201) {
+      if (response.status === 401) {
         return Promise.reject({
           status: 401,
           message: 'An error has occurred. Please try again.'
